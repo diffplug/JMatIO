@@ -1,3 +1,13 @@
+# Migrate to [MatFileRW](https://github.com/diffplug/matfilerw)
+
+Since JMatIO wasn't updated for a while, lots of people made forks.  This fork includes several improvements, but all the packages were renamed to `ca.mjdsystems.jmatio`, which makes it incompatible with other JMatIO forks.
+
+[MatFileRW](https://github.com/diffplug/matfilerw) is an actively maintained fork of JMatIO which merges the improvements of several different forks (including this one).
+
+If you want to adopt the improvements of other branches, while also keeping the features of this branch, you should download `com.diffplug.matsim:matfilerw:2.0.0.TRANSITION` from mavenCentral.  This contains the `ca.mjdsystems.jmatio` packages unchanged, but marked as deprecated.  After you have removed all dependencies on the `ca.mjdsystems.jmatio` packages, you will be able to use the regular `2.0.0` version, and its descendants.
+
+### Old header
+
 JMatIO is a JAVA library to read/write/manipulate with Matlab binary
 MAT-files.
 
